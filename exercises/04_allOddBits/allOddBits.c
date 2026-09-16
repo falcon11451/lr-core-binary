@@ -9,7 +9,9 @@
  *   Rating: 2
  */
 int allOddBits(int x) {
-#error TODO: Return 1 if every odd-numbered bit of x is set.
+	for (int i = 1; i <= 31; i+=2)
+		if (!(x & (1<<i))) return 0;
+	return 1;
 }
 
 int main(void) {

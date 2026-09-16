@@ -8,8 +8,10 @@
  *   Max ops: 15
  *   Rating: 3
  */
-int isAsciiDigit(int x) {
-#error TODO: Return 1 when x is between 0x30 and 0x39 inclusive.
+
+int isAsciiDigit(int x) 
+{
+	return !((x+(~0x30+1))>>31) & !((0x39+(~x+1))>>31);
 }
 
 int main(void) {

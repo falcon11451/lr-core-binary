@@ -7,8 +7,9 @@
  *   Max ops: 24
  *   Rating: 3
  */
-int isLessOrEqual(int x, int y) {
-#error TODO: Return 1 when x is less than or equal to y.
+int isLessOrEqual(int x, int y) 
+{
+	return !((y+(~x+1)) >> 31);
 }
 
 int main(void) {
